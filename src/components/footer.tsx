@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Leaf, AtSign, Share2, MessageCircle, MapPin, Mail } from "lucide-react";
+import Image from "next/image";
+import { AtSign, Share2, MessageCircle, MapPin, Mail } from "lucide-react";
 import { WHATSAPP_NUMBER } from "@/lib/whatsapp";
 
 export function Footer() {
@@ -9,9 +10,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           <div>
             <Link href="/" className="flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white">
-                <Leaf size={18} />
-              </span>
+              <Image src="/logo-nutrivida.png" alt="NutriVida" width={36} height={36} className="h-9 w-9 object-contain" />
               <span className="font-display text-xl font-extrabold">
                 Nutri<span className="gradient-text">Vida</span>
               </span>

@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   LayoutDashboard,
-  Leaf,
   LogOut,
   Menu,
   Package,
@@ -61,9 +61,7 @@ export function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-md shadow-brand-600/30">
-            <Leaf size={18} />
-          </span>
+          <Image src="/logo-nutrivida.png" alt="NutriVida" width={36} height={36} className="h-9 w-9 object-contain" priority />
           <span className="font-display text-xl font-extrabold tracking-tight">
             Nutri<span className="gradient-text">Vida</span>
           </span>
