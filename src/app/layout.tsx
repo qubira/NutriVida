@@ -6,6 +6,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { CartDrawer } from "@/components/cart-drawer";
 import { WhatsappFloatButton } from "@/components/whatsapp-float-button";
+import Script from "next/script";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -39,6 +40,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <CartDrawer />
           <WhatsappFloatButton />
         </Providers>
+        {/* Contador de visitas QUBIRA */}
+        <Script src="https://api-qubira.onrender.com/api/public/sitios/t.js?s=nutrivida" data-sitio="nutrivida" strategy="afterInteractive" />
       </body>
     </html>
   );
